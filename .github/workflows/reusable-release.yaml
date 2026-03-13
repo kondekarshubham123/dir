@@ -63,12 +63,12 @@ jobs:
           if-no-files-found: error
 
   release:
-      runs-on: ubuntu-latest
     name: Release
     needs:
       - image
       - chart
       - cli
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     outputs:
